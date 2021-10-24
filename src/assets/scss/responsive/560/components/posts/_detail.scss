@@ -1,0 +1,25 @@
+.postsDetail.mat-card {
+    padding: 15px;
+    max-width: 100%;
+}
+.postsDetail .mat-card-avatar {
+    width: 120px;
+    height: 120px;
+}
+.postsDetail .mat-card-header .mat-card-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.postsDetail mat-card-subtitle > div {
+    margin-bottom: 5px;
+}
+.postsDetail h2 {
+    font-size: 18px;
+}
+.postsDetail * {
+    font-size: 14px;
+}
+
+.postsDetail .mat-card-actions button {
+    width: 100%;
+}

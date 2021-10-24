@@ -1,0 +1,13 @@
+.client__wrapper .sort {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    & > div {
+        width: 100%;
+        mat-form-field {
+            width: 100%;
+        }
+        &:first-child {
+            margin: 15px 0;
+        }
+    }
+}

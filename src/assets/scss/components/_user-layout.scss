@@ -1,0 +1,10 @@
+.client__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    height: 100%;
+    .content-body {
+        flex-grow: 1;
+        padding: 60px 0;
+    }
+}

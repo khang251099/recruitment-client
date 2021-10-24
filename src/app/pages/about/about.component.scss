@@ -1,0 +1,212 @@
+@mixin color($color:#fff){
+    color:$color;;
+}
+@mixin text-color($txtColor:#9a9a9a)
+{
+    color:$txtColor;
+}
+
+@mixin color-mains ($colorprimary:#01BDD5) {
+    color: $colorprimary;
+}
+
+@mixin bgColor($colorbg:#fff) {
+    background-color: $colorbg;
+}
+
+@mixin borderRa($border:8px) {
+    border-radius: $border;
+}
+
+@mixin font($font-size:14px) {
+    font-size: $font-size;
+}
+
+@mixin family($family:'Book') {
+    font-family: $family;
+}
+
+
+.text__list {
+    .text__main {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 20px;
+            left: -12%;
+            width: 403px;
+            height: 5px;
+            background: linear-gradient(to right, #0b4957, #01BDD5);
+        }
+    }
+    h1, h2 {
+        text-align: center;
+        font-family: "futura-bt-medium";
+    }
+    h1 {
+        font-size: 160px;
+        color: #01BDD5;
+        opacity: 12%;
+    }
+    h2 {
+        font-size: 60px;
+        margin-top: -105px;
+        background: linear-gradient(to right, #0b4957, #01BDD5);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+}
+.container {
+    .text__list {
+        position: relative;
+        margin-top: 50px;
+        .text__main {
+            text-transform: uppercase;
+            text-align: center;
+            color: #01BDD5;
+            opacity: 0.8;
+            font-family: 'Heavy';
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .text__middle {
+            background: -webkit-linear-gradient(#01BDD5, #0b4957);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            @include font(50px);
+            text-align: center;
+            margin-top: -50px;
+            font-family: 'Book';
+        }
+        .background__blue--line.line__contact {
+            position: absolute;
+            left: -30%;
+            background-image: linear-gradient(to right, #01A6CA, #0b4957);
+            width: 28%;
+            height: 25%;
+            top: 50%;
+        }
+    }
+}
+
+/* Shop Page & About Page*/
+
+.shop-content,
+.about-content,
+.news-content {
+  padding: 110px 0 60px;
+}
+
+.shop-content__heading,
+.about-content__heading {
+  font-size: 62.5px;
+ @include color(black);
+ text-align: center;
+}
+
+
+/* About Page */
+.header-about {
+  background-image: linear-gradient(to top, rgb(254, 172, 94, 0.2), rgb(199, 121, 208, 0.4), rgb(75, 192, 200, 0.4)), url(/assets/img/about_background.jpg);
+  background-position: center;
+}
+
+.text-heading {
+  padding: 65px 0 65px;
+}
+
+.text-left {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: right;
+    color: #555555;
+   margin-left:-87px;
+    margin-top: 16px;
+
+}
+
+.col.l-6.m-12.c-12.text__left--right{
+    text-align:justify;
+}
+.text-right {
+  font-size: 30px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  margin-left:10px; 
+  color:#9a9a9a;
+  margin-top:20px;
+}
+
+.image-body {
+  background-image: url(../../../assets/images/parallax-13.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: 50%;
+  margin-top: 65px;
+}
+
+.contact-us__content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-image: linear-gradient(to left, rgba(29, 43, 100, 0.3), rgba(248, 205, 218, 0.3)), url(../../../assets/images/parallax-15.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-top: 35%;
+  border-radius:30px;
+}
+
+.contact-us__staff a {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    margin-top: 40px;
+}
+.btn-orange {
+    background-color: #f3a46b;
+  }
+
+.text-more{
+    color:white;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    
+    padding-right: 12px;
+    text-align: right;
+}
+.text-ours{
+    font-size:50px;
+    font-weight:bold;
+    color:white;
+}
+.contact-us__staff {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.text-flex {
+    display: flex;
+}

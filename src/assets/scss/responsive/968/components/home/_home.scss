@@ -1,0 +1,21 @@
+.search * {
+    font-size: 14px;
+}
+.client__wrapper .category {
+    width: 270px;
+}
+.client__wrapper .category__item a {
+    padding: 10px 15px;
+    font-size: 14px;
+}
+.client__wrapper .job__title {
+    font-size: 16px;
+}
+.client__wrapper .job__info *,
+.client__wrapper .job__expired,
+.client__wrapper .job__apply {
+    font-size: 15px;
+}
+.client__wrapper .sort > div:last-child * {
+    font-size: 15px;
+}

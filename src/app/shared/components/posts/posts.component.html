@@ -1,0 +1,26 @@
+<div class="job__item" *ngFor="let posts of arrPosts">
+    <div class="item">
+        <div class="job__image">
+            <img src="{{posts.image}}" [style.width]="'30%'">
+        </div>
+    
+    </div>
+    <div class="item">
+        <div class="job__title">{{posts.title}}</div>
+        <div class="job__info">
+            Nơi làm việc: <span>{{posts.area.name}}</span> 
+        </div>
+    </div>
+    <div class="item">
+        <div class="job__expired">Hạn nộp: {{posts.expired}}</div>
+        <div class="job__apply">
+            <a routerLink="/posts/{{posts.id}}">Ứng tuyển</a>
+        </div>                    
+    </div>
+   
+</div>   
+<mat-paginator [length]="pageLength"
+    [pageSize]="5"
+    [pageSizeOptions]="[5,10,15]"
+    (page)="onChangePage($event)">
+</mat-paginator>

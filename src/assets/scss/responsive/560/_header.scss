@@ -1,0 +1,11 @@
+.client__wrapper .topbar__flex {
+    justify-content: center;
+}
+.client__wrapper .topbar__item:first-child {
+    flex-grow: 1;
+}
+.client__wrapper .topbar__item:nth-child(2) {
+    position: relative;
+    left: auto;
+    transform: translateX(0);
+}

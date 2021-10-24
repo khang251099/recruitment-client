@@ -1,0 +1,50 @@
+.client__wrapper .logo__mobile {
+    display: block;
+}
+.client__wrapper .logo__desktop {
+    display: none;
+}
+.client__wrapper .search .flex {
+    flex-wrap: wrap;
+    .item {
+        width: 100%;   
+        &:first-child {
+            margin-right: 0;
+        }    
+    }
+}
+.client__wrapper .job {
+    flex-wrap: wrap;
+    & > div {
+        width: 100%;
+    }
+}
+.client__wrapper .category__item {
+    width: calc(100% / 2 - 15px + 15px / 2);
+    margin: 0;   
+    margin-right: 15px;
+    margin-bottom: 15px;
+    &:nth-child(2n) {
+        margin-right: 0; 
+    }
+    &:first-child {
+        margin-top: 0;
+    }   
+}
+
+.client__wrapper .job {
+    border: none;
+}
+
+.client__wrapper .job__all {
+    border-left: none;
+}
+.job__list {
+    border: {
+        left: 1px solid #aaa2a2;
+        right: 1px solid #aaa2a2; 
+    };
+}
+.client__wrapper .job__item:last-child {
+    border-bottom: 1px solid #aaa2a2;
+}

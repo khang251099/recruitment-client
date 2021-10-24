@@ -1,0 +1,89 @@
+
+@mixin color ($colorprimary:#01BDD5) {
+    color: $colorprimary;
+}
+
+@mixin bgColor($colorbg:#fff) {
+    background-color: $colorbg;
+}
+
+@mixin borderRa($border:8px) {
+    border-radius: $border;
+}
+
+@mixin font($font-size:14px) {
+    font-size: $font-size;
+}
+
+@mixin family($family:'Book') {
+    font-family: $family;
+}
+
+@media screen and (max-width:399px)
+{
+    .text__list {
+        .text__main {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 20px;
+                left: -12%;
+                width: 333px;
+                height: 5px;
+                background: linear-gradient(to right, #0b4957, #01BDD5);
+            }
+        }
+        h1, h2 {
+            text-align: center;
+            font-family: "futura-bt-medium";
+        }
+        h1 {
+            font-size: 160px;
+            color: #01BDD5;
+            opacity: 12%;
+        }
+        h2 {
+            font-size: 60px;
+            margin-top: -105px;
+            background: linear-gradient(to right, #0b4957, #01BDD5);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+    }
+    .container {
+        .text__list {
+            position: relative;
+            margin-top: 50px;
+            .text__main {
+                text-transform: uppercase;
+                text-align: center;
+                color: #01BDD5;
+                opacity: 0.8;
+                font-family: 'Heavy';
+                font-size: 60px;
+                font-weight: bold;
+            }
+            .text__middle {
+                background: -webkit-linear-gradient(#01BDD5, #0b4957);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                @include font(50px);
+                text-align: center;
+                margin-top: -50px;
+                font-family: 'Book';
+            }
+            .background__blue--line.line__contact {
+                position: absolute;
+                left: -30%;
+                background-image: linear-gradient(to right, #01A6CA, #0b4957);
+                width: 28%;
+                height: 25%;
+                top: 50%;
+            }
+        }
+    }
+}

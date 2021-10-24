@@ -1,0 +1,45 @@
+.apply {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    &__form {
+        max-width: 40vw;
+        width: 100%;        
+        form {
+            width: 100%;
+            box-shadow: 0 0 15px 0 rgba(0,0,0,0.5);
+        }
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;     
+            padding: 40px 30px;    
+            box-sizing: border-box;            
+        }
+        .item, mat-form-field {
+            width: 100%;
+        }
+        .item {
+            padding: 10px 20px;  
+            box-sizing: border-box;                  
+            &__name, &__email {
+                width: 50%;
+            }
+        }
+        label {
+            margin-right: 20px;
+            color: rgba(0,0,0,.54);
+        }
+        .actions {
+            margin-top: 40px;
+            text-align: center;
+            width: 100%;
+            button {
+                padding: 7px 30px;
+                background-color: #f59d1a;
+                color: #fff;
+                font-size: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<mat-card class="postsDetail" *ngFor="let data of arrPosts">
+    <mat-card-header>
+        <div mat-card-avatar>
+            <img mat-card-image class="postsDetail__image--header" [src]="data.image" alt="Photo of a Shiba Inu">
+        </div>
+        <mat-card-title class="title">{{data.title}}</mat-card-title>
+        <mat-card-subtitle>
+            <div>
+                Khu vực: {{data.area.name}}
+            </div>
+            <div>
+                Ngày tạo: {{data.created_at | date:'medium'}}
+            </div>
+            <div>
+                <a routerLink="/apply"><button class="apply" mat-button>Apply Now</button></a>
+            </div>
+        </mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <p [innerHTML]="data.content"></p>       
+    </mat-card-content>
+    <mat-card-actions>
+        <a routerLink="/apply"><button class="apply" mat-button>Apply Now</button></a>
+    </mat-card-actions>
+  </mat-card>

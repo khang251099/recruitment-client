@@ -1,0 +1,63 @@
+<div class="apply">
+    <div class="apply__form">
+        <form [formGroup]="formSend" (ngSubmit)="onSend()">
+            <div class="flex">
+                <div class="item item__name">
+                    <mat-form-field>
+                        <mat-label>Your name</mat-label>
+                        <input matInput type="text" placeholder="Enter your name" formControlName="name">
+                    </mat-form-field>
+                </div>
+                <div class="item item__email">
+                    <mat-form-field>
+                        <mat-label>Your email</mat-label>
+                        <input matInput type="text" placeholder="Enter your email" formControlName="email">
+                    </mat-form-field>
+                </div>
+                <div class="item">
+                    <mat-form-field>
+                        <mat-label>Your address</mat-label>
+                        <input matInput type="text" placeholder="Enter your address" formControlName="address">
+                    </mat-form-field>
+                </div>
+                <div class="item">
+                    <mat-form-field>
+                        <mat-label>Your phone</mat-label>
+                        <input matInput type="text" placeholder="Enter your phone" formControlName="phone">
+                    </mat-form-field>
+                </div>
+                <div class="item">
+                    <mat-form-field>
+                        <mat-label>Your gender</mat-label>
+                        <mat-select formControlName="gender">
+                            <mat-option *ngFor="let gender of arrGender" [value]="gender.value">{{gender.view}}</mat-option>                          
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="item">
+                    <mat-form-field>
+                        <mat-label>Your cate</mat-label>
+                        <mat-select formControlName="cate_id">
+                            <mat-option *ngFor="let cate of arrCate" [value]="cate.id">{{cate.name}}</mat-option>                           
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="item">
+                    <mat-form-field>
+                        <mat-label>Your area</mat-label>
+                        <mat-select formControlName="area_id">
+                            <mat-option *ngFor="let area of arrArea" [value]="area.id">{{area.name}}</mat-option>                          
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="item">
+                    <label>File CV: </label>
+                    <input id="choose-file" type="file" accept=".pdf" (change)="onChangeFile($event)">                                  
+                </div>
+                <div class="actions">
+                    <button mat-button (ngSubmit)="onSend()">Apply CV</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+ <div class="home">
+        <mat-card class="card-search">
+        <div class="search">
+            <div class="flex">
+                <div class="item">
+                    <mat-form-field appearance="fill">
+                        <mat-label>--- Địa điểm làm việc ---</mat-label>
+                        <mat-select (selectionChange)="onChangeArea($event)">
+                            <mat-option value="all">Tất cả khu vực</mat-option>
+                            <mat-option *ngFor="let area of arrArea" [value]="area.id">{{area.name}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="item">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Tìm việc nhanh</mat-label>
+                        <input matInput type="text" placeholder="Bạn tìm việc gì" (keyup)="onSearch($event)">
+                    </mat-form-field>
+                </div>            
+            
+            </div>        
+        </div>   
+    </mat-card>
+    <div class="content">
+        <div class="text" [style.margin-top.px]="'50'">
+            <h2 class="text__item">tin tuyển dụng, việc làm tốt nhất </h2>
+        </div>
+    </div>
+        <div class="job" [style.margin-top.px]="'20'">
+            <div class="category">
+                <div [style.margin-top.px]="20">
+                    <h4 [style.text-align]="'center'" [style.font-weight]="'bold'">Các loại ngành nghề</h4>
+                </div>
+                <div class="category__list">
+                    <div class="category__item" *ngFor="let cate of arrCategory">
+                        <!--Key n value-->
+                        <a routerLink="/search" [queryParams]="{cate_id: cate.id}" [ngClass]="{'active': cate.id == selectedCateId}" class="button">{{cate.name}}</a>
+                    </div>                
+                </div>
+            </div>
+            <div class="job__all">
+                <div class="sort">
+                    <div>Tìm thấy <b>{{totalPosts}}</b> công việc</div>
+                    
+                </div>
+                <div class="job__list">
+                    <router-outlet></router-outlet>          
+                </div>
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,9 @@
+.client__wrapper .job__item {
+    flex-wrap: wrap;
+    .item {
+        width: 100% !important;
+        &:first-child {
+            margin-bottom: 10px;
+        }
+    }
+}
